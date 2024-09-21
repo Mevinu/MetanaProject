@@ -2,7 +2,6 @@ import { useState } from "react";
 
 interface ButtonProps {
   label: string;
-  onClick: () => void;
 }
 
 interface ListButtonProps {
@@ -12,9 +11,8 @@ interface ListButtonProps {
 function ListGroup({ buttons }: ListButtonProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
-  const handleClick = (index: number, onClick: () => void) => {
+  const handleClick = (index: number) => {
     setSelectedIndex(index);
-    onClick();
   };
 
   return (
@@ -26,7 +24,7 @@ function ListGroup({ buttons }: ListButtonProps) {
               selectedIndex == index ? "tab-item tab-active" : "tab-item"
             }
             key={index}
-            onClick={() => handleClick(index, button.onClick)}
+            onClick={() => handleClick(index)}
           >
             {button.label}
           </li>
