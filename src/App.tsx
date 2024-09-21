@@ -9,14 +9,10 @@ import { Settings } from "./components/Settings";
 import { Options } from "./components/Settings";
 
 function App() {
-  const [sideBarIndex, setSideBarIndex] = useState(0);
   const [selectedForm, setSelectedForm] = useState(0);
   const tabList = [
     {
       label: "Content",
-      onClick: () => {
-        setSideBarIndex(0);
-      },
     },
   ];
 
