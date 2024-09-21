@@ -15,10 +15,14 @@ export function WelcomeForm({
     <>
       <div
         className="flex"
-        style={{ justifyContent: "space-between", gap: "30px" }}
+        style={{
+          justifyContent: "space-between",
+          gap: "30px",
+          alignItems: "center",
+        }}
       >
         <div
-          className="flex-column flex-30gap"
+          className="flex-column flex-30gap welcome-container"
           style={{
             justifyContent: "center",
           }}
